@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z; //right - Red Axis, forward - blue Axis
 
         // move the player
-        controller.Move(move * speed ); //* Time.deltaTime);
+        controller.Move((move * speed ) * Time.deltaTime);
 
         // check if the player can jump
         if(Input.GetButtonDown("Jump") && isGrounded)
