@@ -117,6 +117,12 @@ public class Weapon : MonoBehaviour
 
         Vector3 direction = targetPoint - bulletSpawn.position;
 
+        float x = UnityEngine.Random.Range(spreadIntensity, spreadIntensity);
+        float y = UnityEngine.Random.Range(spreadIntensity, spreadIntensity);
+
+        // returning the shooting direction  and spread intensity
+        return direction + new Vector3(x, y, 0);
+
     }
     private IEnumerator DestroyBulletAfterTime(GameObject bullet, float delay)
     {
